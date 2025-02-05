@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'Jaini-other';
+    src: url(/fonts/jaini-other.woff2);
+}
+
+body {
+    margin: 0;
+    background-color: beige;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    border-bottom: rgb(255, 255, 255, 0.5) 1px solid;
+    padding-bottom: 0;
+    font-size: 1.2rem;
+    color: white;
+}
+
+section.main-p {
+    display: flex;
+    justify-content: center;
+    background-color: burlywood;
+    max-width: 20vw;
+    padding: 10rem;
+}
+
+.cert-nav {
+    justify-content: space-around;
+    max-width: 100%;
+    padding: 2rem;
+}
+
+.cert-b {
+    align-content: normal;
+    justify-items: space-around;
+}
+
+body.main-p {
+    align-content: center;
+    justify-items: center;
+}
+
+#csdevin2025 {
+    background-image: url(images/cs-back.svg);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: larger;
+    font-family: 'Jaini-other';
+}
+
+#csdevin2025 img {
+    justify-content: flex-end
+}
+.certification {
+    text-align: center;
+}
+
+.cert-text {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+h1 {
+    font-size: 64px;
+}
+p {
+    max-width: 30vw;
+}
+h3 {
+    margin-top: 20vh
+}
+
+h2.line {
+    border-bottom: 3px black solid;
+    margin-top: 5vh;
+    color:chartreuse; 
+    padding-bottom: .5rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+ nav.index {
+    color: black
+ }

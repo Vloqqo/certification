@@ -16,9 +16,9 @@ certification2.date = localDate;
 certification2.issuer = "";
 certification2.recepient = "";
 
-const certification3 = {};
+const certification3 = document.getElmentById('csdevin2025');
 
 certification3.date = localDate;
-certification3.issuer = "";
+certification3.issuer = prompt('Who is Issuing the Certification?');
 certification3.recepient = "";
 
