@@ -9,6 +9,11 @@ body {
     height: 100%;
 }
 
+.index-b {
+    display: flex;
+    flex-flow: column wrap;
+}
+
 html {
     height: 100%;
 }
@@ -22,17 +27,20 @@ a {
 }
 
 section.main-p {
-    display: flex;
-    justify-content: center;
+    align-self: center;
     background-color: burlywood;
     max-width: 20vw;
     padding: 10rem;
 }
 
 .cert-nav {
-    justify-content: space-around;
+    display: flex;
+    justify-content: space-evenly;
     max-width: 100%;
     padding: 2rem;
+    background-color: darkslategrey;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .cert-b {
@@ -59,6 +67,10 @@ body.main-p {
     justify-content: flex-end
 }
 .certification {
+    text-align: center;
+}
+
+.get-cert {
     text-align: center;
 }
 
@@ -98,7 +110,6 @@ ul {
     border: none;
     cursor: pointer;
   }
-  
- nav.index {
-    color: black
- }
+#astronaut {
+    background-image: url(/images/astronaut.svg);
+}
