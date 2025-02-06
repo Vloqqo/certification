@@ -3,6 +3,11 @@
     src: url(/fonts/jaini-other.woff2);
 }
 
+@font-face {
+    font-family: 'kelly';
+    src: url(/fonts/kelly.woff2);
+}
+
 body {
     margin: 0;
     background-color: beige;
@@ -112,4 +117,35 @@ ul {
   }
 #astronaut {
     background-image: url(/images/astronaut.svg);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: larger;
+    font-family: 'kelly';
+}
+
+.nasalogo {
+    position: absolute;
+    bottom: 0
+}
+
+#Henchman {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: honeydew;
+    font-size: larger;
+    background-color: purple;
+}
+
+.villainy {
+    display: flex;
+    align-items: flex-end;
+}
+
+@media print {
+    nav.cert-nav {
+        display: none;
+    }
 }
