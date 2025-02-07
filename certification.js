@@ -2,27 +2,52 @@ let date_data = new Date()
 let localDate = date_data.toLocaleString();
 let current_hour = date_data.getHours()
 let current_minute = date_data.getMinutes();
+// Defining variables for time
 
 
 
-
-
-function promptClick1() {
-    let namechoose = document.createElement('input')
-    namechoose.id = ("i1");
-    document.getElementById('b1').replaceWith(namechoose)
-    const enterKey = document.getElementById('i1');
-enterKey.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
-        alert("Works!");
-    }
-});
+// This makes it
+function enter(id) {
+    const enterKey = document.getElementById(id);
+    enterKey.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+            alert("Works!");
+            
+        }
+    })
 }
 
+function getvalues(id, value) {
+    value = document.getElementById(id).value;
+    // reset('Name', promptClick1())
+    return(value);
+}
+
+// This creates an input element in the html
+// whenever the user clicks on the specified button
+function promptClick1() {
+    let nameChoose = document.createElement('input');
+    nameChoose.id = ("i1");
+    document.getElementById('b1').replaceWith(nameChoose);
+    // This calls the enter function giving it the id to 
+    enter(nameChoose.id);
+    getvalues(nameChoose.id, value);
+}
+
+// function reset(text, func) {
+//     let resetButton = document.createElement('button');
+//     resetButton.id = ('b1');
+//     resetButton.innerHTML = text;
+//     resetButton.onclick = func
+// }
+
 function promptClick2() {
-    let issuer = document.createElement('input')
-    issuer.id = ("i2");
-    document.getElementById('b2').replaceWith(issuer)
+    let issuerCreate = document.createElement('input')
+    issuerCreate.id = ("i2");
+    document.getElementById('b2').replaceWith(issuerCreate)
+    enter(issuerCreate.id);
+    certification.issuer = value
+    getvalues(issuerCreate.id, value)
 }
 
 function promptClick(bnum) {
@@ -44,23 +69,11 @@ function promptClick(bnum) {
         promptClick3(x);
     }
 }
+const certification = {};
 
-// const certification1 = {};
+certification.date = localDate;
+certification.issuer;
+certification.recepient;
 
-// certification1.date = localDate;
-// certification1.issuer = "";
-// certification1.recepient = namechoose;
-
-
-// const certification2 = {};
-
-// certification2.date = localDate;
-// certification2.issuer = "";
-// certification2.recepient = namechoose;
-
-// const certification3 = {};
-
-// certification3.date = localDate;
-// certification3.issuer = prompt('Who is Issuing the Certification?');
-// certification3.recepient = namechoose;
-
+// localStorage.setItem(issuer, certification.issuer);
+// localStorage.setItem(recepient, certification.recepient)
