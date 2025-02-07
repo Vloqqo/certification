@@ -148,4 +148,30 @@ ul {
     nav.cert-nav {
         display: none;
     }
+    h3 {
+        margin-top: 1vh
+    }
+    h2 {
+        width: 100%;
+    }
+    h1.name {
+        margin-top: 2vh;
+        margin-bottom: 2vh
+    }
+    .earth-svg {
+        width: 30vw;
+        object-fit: contain;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    .home {
+        top: 0
+    }
+}
+
+.home {
+    position:absolute;
+    top: 10vh;
+    right: 0;
 }
