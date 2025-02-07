@@ -3,17 +3,20 @@ let localDate = date_data.toLocaleString();
 let current_hour = date_data.getHours()
 let current_minute = date_data.getMinutes();
 
-// const node = document.querySelector("#i1");
-// node.addEventListener("keypress", function(event) {
-//     if (event.key === "Enter") {
-//         alert("Works!");
-//     }
-// });
+
+
+
 
 function promptClick1() {
     let namechoose = document.createElement('input')
     namechoose.id = ("i1");
     document.getElementById('b1').replaceWith(namechoose)
+    const enterKey = document.getElementById('i1');
+enterKey.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        alert("Works!");
+    }
+});
 }
 
 function promptClick2() {
