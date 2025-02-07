@@ -8,6 +8,11 @@
     src: url(/fonts/kelly.woff2);
 }
 
+@font-face {
+    font-family: 'lux';
+    src: url(/fonts/lux.woff2);
+}
+
 body {
     margin: 0;
     background-color: beige;
@@ -135,8 +140,14 @@ ul {
     display: flex;
     justify-content: space-between;
     color: honeydew;
-    font-size: larger;
+    font-size: 24px;
     background-color: purple;
+    font-family: 'lux';
+}
+
+#Henchman h1.name {
+    color: red;
+    font-size: 80px;
 }
 
 .villainy {

@@ -2,21 +2,19 @@ let date_data = new Date()
 let localDate = date_data.toLocaleString();
 let current_hour = date_data.getHours()
 let current_minute = date_data.getMinutes();
-// Defining variables for time
+//  Defining variables for time
+let name1 = "";
 
 
-// This makes it
+//  This grabs the value of the string whenever enter is pressed
 function enter(id) {
     const enterKey = document.getElementById(id);
     enterKey.addEventListener("keydown", (event) => {
         if (event.key === "Enter") {
             alert("Works!");
             if (id == 'i1') {
-                value1 = document.getElementById('i1').value;
-
-                // localStorage.setItem('Name', value1);
-
-                return (value1);
+                let name1 = document.getElementById('i1').value;
+                localStorage.setItem('Name', name1);
             }
             if (id == 'i2') {
                 value2 = document.getElementById('i2').value;
@@ -28,24 +26,24 @@ function enter(id) {
     })
 }
 
-// This creates an input element in the html
-// whenever the user clicks on the specified button
+//  This creates an input element in the html
+//  whenever the user clicks on the specified button
 function promptClick1() {
     let nameChoose = document.createElement('input');
     nameChoose.id = ("i1");
     document.getElementById('b1').replaceWith(nameChoose);
-    // This calls the enter function giving it the id to 
+    //  This calls the enter function giving it the id
     enter(nameChoose.id);
     // reset('Name', promptClick1());
 }
 
-// function reset(text, func) {
-//     let resetButton = document.createElement('button');
-//     resetButton.id = ('b1');
-//     resetButton.innerHTML = text;
-//     resetButton.onclick = func
-//     document.getElementById('i1').replacedWith(resetButton)
-// }
+function reset(text, func) {
+    let resetButton = document.createElement('button');
+    resetButton.id = ('b1');
+    resetButton.innerHTML = text;
+    resetButton.onclick = func
+    document.getElementById('i1').replacedWith(resetButton)
+}
 
 // function promptClick2() {
 //     let issuerCreate = document.createElement('input')
@@ -54,6 +52,8 @@ function promptClick1() {
 //     enter(issuerCreate.id);
 // }
 
+
+//  Allows for button to use same way to execute js but have a different function
 function promptClick(bnum) {
     let x = 0;
 
@@ -75,7 +75,7 @@ function promptClick(bnum) {
 }
 
 
-
+//  Setting the object and assigning property values that can be called upon for later
 const cert1 = {};
 
 cert1.title = `Certified Henchman`;
@@ -92,28 +92,6 @@ const cert3 = {};
 
 cert3.title = `Computer Science Certification`;
 cert3.description = `has completed their training in being a certified Computer Science Developer. This certification can be used for priority at a nearby homeless shelter instead of having to fight others (Art Majors) for a spot in case of limited availability at the aforementioned homeless shelter`;
-cert3.issuer = `The Chamber of Computer Science`
+cert3.issuer = `The Chamber of Computer Science`;
 
-// timetell = document.querySelector('.time');
-// timetell.innerHTML += `<h4>Issued on: ${localDate}</h4>`;
-
-certIds = ['Henchman', 'csdevin2025', 'astronaut'];
-let certPage = document.querySelector(certIds);
-if (certPage == 'Henchman') {
-    certPage.insertAdjacentHTML('beforeend', `
-        <img src="/images/villainy.png" alt="Villainous Henchman">
-        <section class="villainy">
-            <img src="/images/shirt.png" alt="Hilarious Shirt btw" width="100px" height="100px">
-        </section>
-        <section class="cert-text">
-            <h2 class="line">${cert1.title}</h2>
-            <h2>In the utmost esteem that villainy can give. We bestow upon:</h2>
-            <h1 class="name">John Doe</h1>
-            <p>${cert1.description}</p>
-            <h3>${cert1.issuer}</h3>
-            <section class="time"></section>
-        </section>
-        <section class="villainy">
-            <img src="/images/lol.png" alt="Villainous Certification Stamp" width="200px" height="200px">
-        </section>`)
-};
+// This searches for the ids assigne to the bodies then changes the inside of the html
