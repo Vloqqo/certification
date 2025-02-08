@@ -11,7 +11,7 @@ function enter(id) {
     const enterKey = document.getElementById(id);
     enterKey.addEventListener("keydown", (event) => {
         if (event.key === "Enter") {
-            alert("Works!");
+            alert("Saved Name! Head to the Certifications!");
             if (id == 'i1') {
                 let name1 = document.getElementById('i1').value;
                 // Sets name value in storage
