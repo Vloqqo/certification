@@ -93,6 +93,7 @@ function loadInfo(ID) {
     // Gets name value from local storage
     let name2 = localStorage.getItem('Name');
     // Checks what ID is equal to and inserts the following html, which is specific to ID value
+    // Object properties are inserted along with the name2 value
     if (ID == "#Henchman") {
         document.querySelector('#Henchman').innerHTML = (` 
         <img src="/images/villainy.png" alt="Villainous Henchman">
@@ -142,7 +143,9 @@ function loadInfo(ID) {
 <img class="nasalogo" src="/images/nasalogo.svg" alt="Nasa logo" width="200px">
 <img class="earth-svg" src="/images/earth.png" alt="Quarter of Earth shown with a rocket blasting off">`);
     }
+    // This grabs a time class
     timetell = document.querySelector('.time');
+    // If there is a timeclass then insert html which gives us the date
     if (timetell)
     timetell.innerHTML += `<h4> Issued on: ${localDate}</h4>`;
 }
