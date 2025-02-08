@@ -1,5 +1,5 @@
  let name2 = localStorage.getItem('Name');
-let certpage2 = document.querySelector('#csdevin2025');
+let certPage2 = document.querySelector('#csdevin2025');
 certPage2.innerHTML = (`
          <section class="cert-text">
              <h2 class="line">${cert3.title}</h2>
