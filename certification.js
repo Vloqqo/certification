@@ -14,12 +14,12 @@ function enter(id) {
             alert("Works!");
             if (id == 'i1') {
                 let name1 = document.getElementById('i1').value;
+                // Sets name value in storage
                 localStorage.setItem('Name', name1);
             }
             if (id == 'i2') {
                 value2 = document.getElementById('i2').value;
                 localStorage.setItem('Issuer', value2);
-                return (value2)
             }
         }
 
@@ -36,21 +36,15 @@ function promptClick1() {
     enter(nameChoose.id);
     // reset('Name', promptClick1());
 }
-
-function reset(text, func) {
-    let resetButton = document.createElement('button');
-    resetButton.id = ('b1');
-    resetButton.innerHTML = text;
-    resetButton.onclick = func
-    document.getElementById('i1').replacedWith(resetButton)
-}
-
-// function promptClick2() {
-//     let issuerCreate = document.createElement('input')
-//     issuerCreate.id = ("i2");
-//     document.getElementById('b2').replaceWith(issuerCreate)
-//     enter(issuerCreate.id);
+// A planned reset function that does not work
+// function reset(text, func) {
+//     let resetButton = document.createElement('button');
+//     resetButton.id = ('b1');
+//     resetButton.innerHTML = text;
+//     resetButton.onclick = func
+//     document.getElementById('i1').replacedWith(resetButton)
 // }
+
 
 
 //  Allows for button to use same way to execute js but have a different function
@@ -94,4 +88,62 @@ cert3.title = `Computer Science Certification`;
 cert3.description = `has completed their training in being a certified Computer Science Developer. This certification can be used for priority at a nearby homeless shelter instead of having to fight others (Art Majors) for a spot in case of limited availability at the aforementioned homeless shelter`;
 cert3.issuer = `The Chamber of Computer Science`;
 
-// This searches for the ids assigne to the bodies then changes the inside of the html
+
+
+function loadInfo(ID) {
+    // Gets name value from local storage
+    let name2 = localStorage.getItem('Name');
+    // Checks what ID is equal to and inserts the following html, which is specific to ID value
+    if (ID == "#Henchman") {
+        document.querySelector('#Henchman').innerHTML = (` 
+        <img src="/images/villainy.png" alt="Villainous Henchman">
+        <section class="villainy">
+            <img src="/images/shirt.png" alt="Hilarious Shirt btw" width="100px" height="100px">
+        </section>
+        <section class="cert-text">
+            <h2 class="line">${cert1.title}</h2>
+            <h2>In the utmost esteem that villainy can give. We bestow upon:</h2>
+            <h1 class="name">${name2}</h1>
+            <p>${cert1.description}</p>
+            <h3>${cert1.issuer}</h3>
+            <section class="time"></section>
+        </section>
+        <section class="villainy">
+            <img src="/images/lol.png" alt="Villainous Certification Stamp" width="200px" height="200px">
+        </section>`);
+    }
+
+    if (ID == 'csdev') {
+        let certPage2 = document.querySelector('#csdevin2025');
+        certPage2.innerHTML = (`
+             <section class="cert-text">
+                 <h2 class="line">${cert3.title}</h2>
+                 <h2>This Certification shows the person
+                     in question:</h2>
+                 <h1 class="name">${name2}</h1>
+                 <p>${cert3.description}</p>
+                 <h3>Issued by: ${cert3.issuer}</h3>
+                 <section class="time"></section>
+             </section>
+             <img class="home" src="/images/homeless.png" alt="CS Stamp Certification" width="400px" height="200px">
+             <img src="/images/cshome.png" alt="Cs dev house in 2025">
+     `);
+    }
+    if (ID == 'astronaut') {
+        let certPage3 = document.querySelector('#astronaut');
+        certPage3.innerHTML = (`
+        <section class="cert-text">
+            <h2 class="line">${cert2.title}</h2>
+            <h2>This certification represents:</h2>
+            <h1 class="name">${name2}</h1>
+            <p>${cert2.description}</p>
+            <h3>${cert2.issuer}</h3>
+    <section class="time"></section>
+</section>
+<img class="nasalogo" src="/images/nasalogo.svg" alt="Nasa logo" width="200px">
+<img class="earth-svg" src="/images/earth.png" alt="Quarter of Earth shown with a rocket blasting off">`);
+    }
+    timetell = document.querySelector('.time');
+    if (timetell)
+    timetell.innerHTML += `<h4> Issued on: ${localDate}</h4>`;
+}
