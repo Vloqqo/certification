@@ -3,7 +3,6 @@ let localDate = date_data.toLocaleString();
 let current_hour = date_data.getHours()
 let current_minute = date_data.getMinutes();
 //  Defining variables for time
-let name1 = "";
 
 
 //  This grabs the value of the string whenever enter is pressed
